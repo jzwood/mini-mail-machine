@@ -1,0 +1,13 @@
+module.exports = () => {
+  return `
+  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+  <html>
+  ${ template.head() }
+  <body style="margin:0; padding:0;">
+    <div style="position:absolute; max-height:0; font-size:0;">[[WEB_OPEN]]</div>
+    ${ template.mobile_body() }
+    ${ template.desktop_body() }
+  </body>
+  </html>
+  `
+}

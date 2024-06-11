@@ -1,0 +1,26 @@
+module.exports = () => {
+  return `
+  <head>
+  <title>[[PAGE_NAME]]</title>
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+  <style type="text/css">
+    ${ template.styles() }
+  </style>
+    <!--[if gte mso 9]>
+    <style type="text/css">
+  table, td, div, p { font-family: Lucida Sans, Lucida Sans Unicode, Lucida Grande, Arial, Helvetica, Verdana, sans-serif !important; line-height: normal !important; }
+  .outlook-leading { line-height: 22px !important }
+  </style>
+    <![endif]-->
+    <!--[if lte mso 7]>
+    <style type="text/css">
+  table, td, div, p { font-family: Lucida Grande, Lucida Sans, Lucida Sans Unicode, Arial, Helvetica, Verdana, sans-serif !important; line-height: normal; }
+  </style>
+    <![endif]-->
+  </head>
+  `
+}

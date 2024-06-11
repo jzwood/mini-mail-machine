@@ -1,0 +1,618 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+  <html>
+
+  <head>
+  <title>[[PAGE_NAME]]</title>
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+  <style type="text/css">
+
+  body { width: 100% !important; background-color: #ffffff; padding: 0; margin: 0; }
+  a, a.aapl-link, a.aapl-link:link { text-decoration: none; }
+  sup { vertical-align: baseline; position: relative; top: -0.4em; font-size: 11px;}
+  a.aapl-link:hover { text-decoration: underline; }
+  /*a { border: 0; outline: 0; }*/
+  table[id=aapl-eyebrow] a, table[id=aapl-footer], *[class=aapl-container] a, #aapl-footer a, a { color: inherit; }
+  #mobile-top section, #mobile-bottom section { mso-hide: all; }
+  *[class=show_me_always] { visibility: visible; }
+  /*
+    Media queries will be ignored by most non-mobile clients.
+    Query parameters will further ensure correct targeting.
+  */
+
+  /* Tablet (not large size, ie. iPad Pro) */
+  @media only screen and ( max-device-width: 768px ) {
+    * { text-rendering: optimizelegibility; }
+    body { -webkit-text-size-adjust: 110%; }
+    /*td { line-height: 1.3em !important; }*/
+    *[class=aapl-container] { -webkit-text-size-adjust: 106%; line-height: 1.2em !important; padding-left: 28px !important; padding-right: 28px !important; }
+    #aapl-footer { -webkit-text-size-adjust: 120%; line-height: 1.2em !important; }
+
+  }
+  /* Retina Images */
+  @media only screen and ( min-device-width: 569px ) and ( -webkit-min-device-pixel-ratio: 2 ), only screen and ( min-device-width: 569px ) and ( min-device-pixel-ratio: 2 ) {
+    img { visibility: hidden; }
+    *[class=more] { visibility: visible; }
+    *[class=more], *[class~=aapl-link] img { visibility: visible !important; }
+
+  *[class=aapl-logo] { background: url('../dev/i/fruit-999_ff_2x.png') no-repeat center 0; background-size: 22px 26px; background-position: left center; }
+  *[class=d-hero-image] { background: url('../dev/i/five_up_large_2x.jpg') no-repeat center 0; background-size: 504px 186px;  }
+
+  }
+  /* Mobile Styles */
+  @media only screen and (max-device-width: 568px) {
+    *[id=desktop] { display: none !important; }
+    *[id=mobile-top] { width: 100% !important; max-width: 100% !important; max-height: none !important; float: none !important; overflow: visible !important; height: inherit !important; display: block !important; margin: 0 auto !important; }
+    *[id=mobile-bottom] { width: 100% !important; max-width: 100% !important; max-height: none !important; float: none !important; overflow: visible !important; height: inherit !important; display: block !important; margin: 0 auto !important; }
+    /* RESET */
+    html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, fieldset, input, abbr, article, aside, command, details, figcaption, figure, footer, header, hgroup, mark, meter, nav, output, progress, section, summary, time { margin: 0; padding: 0 }
+    h1, h2, h3, h4, h5, h6, pre, code, address, caption, cite, code, em, strong, th, figcaption { font-size: 1em; font-weight: normal; font-style: normal }
+    fieldset, iframe { border: none }
+    caption, th { text-align: left }
+    table { border-collapse: collapse; border-spacing: 0 }
+    article, aside, footer, header, hgroup, nav, section, figure, figcaption { display: block }
+    body { background-color: #f2f2f2; min-width: 320px !important }
+    /* INSERT MOBILE LAYOUT HERE */
+
+  /* normalized mobile layout */
+  .mobile { width: 100%; font-family: system, -apple-system, -webkit-system-font, 'SFNSText', 'Segoe UI Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; color: #333333; font-size: 16px; line-height: 1.4em; font-weight: 400; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; -webkit-font-smoothing: antialiased; text-rendering: optimizelegibility; text-align: center; background-color: #ffffff; }
+  .mobile img { display: block; background-position: 50% 0; background-repeat: no-repeat; background-size: 100% 100%; margin: auto; }
+  .mobile img.more { display: inline-block; margin: 0; }
+  .mobile a { color: #0070c9;; cursor: pointer; -webkit-tap-highlight-color: rgba(0.3, 0.3, 0.3, 0.3); }
+  .mobile a:hover { text-decoration: underline; }
+  .mobile div.body { width: 100% !important; max-width: 414px !important; max-height: none !important; float: none !important; overflow: hidden; position: relative; margin: 0 auto; background-color: #ffffff; }
+  .mobile-bottom { background-color: #f2f2f2; }
+  .mobile-bottom div.body { padding-top: 0; background-color: #f2f2f2; }
+  /*.mobile-bottom div.body p { padding: 0; }*/
+  .mobile .divider, .mobile .divider-full { border-top: 1px solid #d6d6d6; margin: 45px 5% 45px; }
+  .mobile .divider-full{ margin: 0; }
+  .mobile .keyline { display: block; height: 1px; border-top: 1px solid #d6d6d6; margin: 35px 5% 34px; }
+
+  /*top*/
+  /*.m-top {position: relative;}*/
+  .mobile .m-apple-logo{ margin-bottom: 30px; margin-left: 5%;  text-align: left; }
+  .mobile .m-fruit-logo img { margin: 15px 0 0;}
+
+  /*content*/
+  .mobile .mobile-body-wrapper{ padding: 0 15px; }
+  .mobile .m-ttl { text-align: left; font-size: 20px; padding-top: 8px; padding-bottom: 36px; }
+  .mobile .m-section-container-1{ padding-bottom: 54px;}
+  .mobile .m-section{ text-align: left; }
+  .mobile .m-sect-h1{ font-size: 22px; letter-spacing: -0.025em; font-weight: 500; line-height:1.25em;}
+  .mobile .m-sect-p{ font-size: 17px; padding-top: 13px; padding-right:13px; letter-spacing: 0.003em; line-height: 26px;}
+  .mobile .m-cta{ color: #0070c9;; display: block; padding-top: 8px; }
+
+  .mobile .m-h1-2{ padding-right:50px; }
+  /*.mobile .m-h1-3{ letter-spacing: -0.03em}
+  .mobile .m-h1-4{ letter-spacing: -0.02em}*/
+
+  .mobile .m-section-container-2{ padding-bottom: 30px;}
+  .mobile .m-section-container-3{ padding-bottom: 30px;}
+  .mobile .m-section-container-4{ padding-bottom: 39px;}
+
+  .mobile .m-h2 { letter-spacing: 0.036em; line-height: 26px; padding-bottom: 54px;}
+  .mobile .m-p-3{ padding-right: 17px;}
+
+  .mobile .blue { color: #0070c9;}
+  .mobile .no-margin { margin: 0; }
+  .mobile .no-padding { padding: 0; }
+
+  /* Buystrip */
+  .mobile .m-buystrip-tile{
+    display: block;
+    float: left;
+    line-height: 24px;
+    font-size: 12px;
+    font-weight: 500;
+    width: 50%;
+    text-align: left;
+    padding-top: 17px;
+    padding-bottom: 3px;
+  }
+
+  .mobile .m-buystrip-p0{ font-weight: 600; color: #333333;}
+  .mobile .m-buystrip-tile-container{ overflow: auto; padding-bottom: 6px;}
+  .mobile .legal-p{ padding-bottom: 12px;}
+  /*.mobile .legal-p-s0{ padding-bottom: 12px;}
+  .mobile .legal-p-s1{ padding-bottom: 24px;}
+  .mobile .legal-p-s2{ padding-bottom: 12px;}
+  .mobile .legal-p-s3{ padding-bottom: 24px;}*/
+  .mobile .legal-p-s4{ padding-bottom: 24px;}
+
+  .mobile .buystrip {}
+  .mobile .buystrip .link { margin-left: 0; text-align: center; }
+  .mobile .buystrip .m
+  .mobile .m_buystrip_1,
+  .mobile .m_buystrip_2,
+  .mobile .m_buystrip_3 { background-color: #ffffff; }
+  .mobile .m_buystrip_icon { margin-bottom: 10px; }
+  .mobile .m_buystrip_2 .m_buystrip_icon { margin-bottom: 13px; }
+  .mobile .m_buystrip_3 .m_buystrip_icon { margin-bottom: 12px; }
+  .mobile .m_buystrip_header { margin-bottom: 5px; }
+  .mobile .m_buystrip_2 .m_buystrip_header { margin-bottom: 5px; }
+  .mobile .m_buystrip_3 .m_buystrip_header { margin-bottom: 5px; }
+  .mobile .m_buystrip_1 .link,
+  .mobile .m_buystrip_3 .link { margin-top: 10px; margin-bottom: 37px; }
+  .mobile .m_buystrip_2 .link { margin-top: 10px; margin-bottom: 44px; }
+  .mobile .m_buystrip_3 .link { margin-bottom: 27px; }
+  .mobile .subtle-link a { color: #333333; text-decoration: none; }
+
+  /* mobile footer styles */
+  .mobile .aapl-footer { color: #999999; padding: 2px 5% 0; background-color: #f2f2f2; }
+  .mobile .aapl-footer .divider { margin: 0; }
+  .mobile .aapl-footer a { color: inherit; font-size: inherit; font-weight: inherit; text-decoration: none; white-space: nowrap; letter-spacing: inherit; }
+  .mobile .aapl-lowbrow { font-size: 12px; font-weight: 500; padding: 8px 0 9px; text-align: center; letter-spacing: -0.025em; }
+  .mobile .aapl-lowbrow .vertical-spacer { padding: 0 10px; }
+  .mobile .aapl-legal { font-size: 9px; line-height: 1.4; text-align: left; padding-top: 22px;}
+  .mobile .aapl-legal .sosumi { line-height: 1.67; padding-bottom: 17px; }
+  .mobile .aapl-legal a { color: #666666; }
+  .mobile .aapl-legal span { padding: 0 6px; }
+
+  /* suppress iOS highlighting for dates and addresses */
+  .mobile .aapl-footer .subtle-link { color: #999999; padding: 0; }
+  .mobile .aapl-footer .subtle-link { color: #999999; padding: 0; margin: 0; display: inline; }
+  .mobile .aapl-footer .subtle-link a { color: #999999; }
+  }
+
+  }
+
+  </style>
+    <!--[if gte mso 9]>
+    <style type="text/css">
+  table, td, div, p { font-family: Lucida Sans, Lucida Sans Unicode, Lucida Grande, Arial, Helvetica, Verdana, sans-serif !important; line-height: normal !important; }
+  .outlook-leading { line-height: 22px !important }
+  </style>
+    <![endif]-->
+    <!--[if lte mso 7]>
+    <style type="text/css">
+  table, td, div, p { font-family: Lucida Grande, Lucida Sans, Lucida Sans Unicode, Arial, Helvetica, Verdana, sans-serif !important; line-height: normal; }
+  </style>
+    <![endif]-->
+  </head>
+
+  <body style="margin:0; padding:0;">
+    <div style="position:absolute; max-height:0; font-size:0;">[[WEB_OPEN]]</div>
+
+<!-- MOBILE VERSION -->
+<div class="mobile mobile-top" id="mobile-top" style="width:0; height:0; max-height:0; float:left; overflow:hidden; display:none;">
+  <div class="body">
+    <!-- fruit logo -->
+    <div class="m-fruit-logo">
+       <img src="../dev/i/m_fruit_999_ff_2x.png" width="20" height="25" border="0" style="" alt="">
+    </div>
+    <div class="mobile-body-wrapper">
+      <h1 class="m-ttl">fruitPhone Upgrade Program</h1>
+
+    <section class="m-section-1 m-section-container-1">
+      <h1 class="m-section m-sect-h1 m-h1-1">Your new fruitPhone 7 is ready when you are.</h1>
+      <p class="m-section m-sect-p m-p-1">Customer, now that you’re eligible to get a new fruitPhone, you can upgrade to fruitPhone 7 today. So you can start enjoying an advanced new camera system, a splash and water resistant design,<sup style="font-size: 11px;">1</sup> and the best performance and battery life ever in an fruitPhone.<sup style="font-size: 11px;">2</sup></p>
+      <a href="[[CLIK_MAKEARESERVATION_LINK]]" class="m-section m-cta" style="">Make a reservation<img src="../dev/i/icon_chevronright_17_ffffff_2x.png" class="more" width="24" height="20" style="display:inline; margin:0; position:relative; top: 7px;" border="0" alt=""></a><a href="[[CLIK_FINDSTORE_LINK]]" class="m-section m-cta" style="">Find an Fruit Store<img src="../dev/i/icon_chevronright_17_ffffff_2x.png" class="more" width="24" height="20" style="display:inline; margin:0; position:relative; top: 7px;" border="0" alt=""></a>
+    </section>
+
+    <section class="m-section-2 m-section-container-2">
+      <h1 class="m-section m-sect-h1 m-h1-2">Reserve online. Or visit an Fruit Store.</h1>
+      <p class="m-section m-sect-p m-p-2">Make a reservation to pick up your new fruitPhone at your nearest Fruit Store, or just stop by at a time that’s convenient for you.<sup style="font-size: 11px;">5</sup> And be sure to <a href="[[CLIK_BACKUPDATA_LINK]]" class="aapl-link" style="color:#0070c9;">back up your data</a> on your current fruitPhone before you bring it with you to trade in.</p>
+
+    </section>
+
+    <section class="m-section-3 m-section-container-3">
+      <h1 class="m-section m-sect-h1 m-h1-3">Pick up your new fruitPhone.</h1>
+      <p class="m-section m-sect-p m-p-3">When you arrive at the Fruit Store, just let a Specialist know that you’re ready to upgrade. They can help you complete your trade in and get you set up with your new fruitPhone.</p>
+
+    </section>
+
+    <section class="m-section-4 m-section-container-4">
+      <h1 class="m-section m-sect-h1 m-h1-4">FruitCare+ means you’re covered.</h1>
+      <p class="m-section m-sect-p m-p-4">Because you have FruitCare+, both the fruitPhone you’re trading in and the fruitPhone you’re upgrading to are covered for up to two incidents of accidental damage.<sup style="font-size: 11px;">3</sup></p>
+      <a href="[[CLIK_FRUITCARE_LINK]]" class="m-section m-cta" style="">Learn more about your coverage<img src="../dev/i/icon_chevronright_17_ffffff_2x.png" class="more" width="24" height="20" style="display:inline; margin:0; position:relative; top: 7px;" border="0" alt=""></a>
+    </section>
+      <h2 class="m-section m-h2">Thanks for being part of the fruitPhone Upgrade Program. If you have any questions, feel free to contact us at<span style="color:#ffffff;">:</span><span class="blue">1-800-MY-FRUIT</span>.</h2>
+    </div>
+    <div>
+       <img src="../dev/i/m_five_up_2x.jpg" width="280" height="116" border="0" style="padding-right:8px;" alt="">
+    </div>
+  </div>
+  <div class="divider-full"></div>
+</div>
+<!-- MOBILE FOOTER -->
+  <div id="mobile-bottom" class="mobile mobile-bottom" style="width:0;height:0;max-height:0;float:left;overflow:hidden;display:none;">
+    <div class="body" style="overflow:hidden;">
+      <section class="aapl-footer">
+
+    <div class="aapl-lowbrow">
+      <a href="[[CLIK_M_BNAV_SHOP]]">Shop Online</a><span class="vertical-spacer">|</span><a href="[[CLIK_M_BNAV_FIND]]">Find a Store</a><span class="vertical-spacer">|</span><span class="format-detection">1-800-MY-FRUIT</span></div>
+      <div class="divider"></div>
+      <div class="aapl-lowbrow">
+      <a href="[[CLIK_M_BNAV_APP]]">Get the Fruit Store App</a></div>
+      <div class="divider">
+    </div>
+        <section class="m-buystrip-tile-container">
+
+        <div class="m-buystrip-tile">
+          <p class="m-buystrip-p m-buystrip-p0">Shop Mac</p><p class="m-buystrip-p m-buystrip-p1">Mac Accessories</p><p class="m-buystrip-p m-buystrip-p2">Gift Cards</p>
+        </div>
+        <div class="m-buystrip-tile">
+          <p class="m-buystrip-p m-buystrip-p0">Shop iPod</p><p class="m-buystrip-p m-buystrip-p1">iPod Accessories</p><p class="m-buystrip-p m-buystrip-p2">Gift Cards</p>
+        </div>
+        <div class="m-buystrip-tile">
+          <p class="m-buystrip-p m-buystrip-p0">Shop fruitPhone</p><p class="m-buystrip-p m-buystrip-p1">fruitPhone Accessories</p><p class="m-buystrip-p m-buystrip-p2">Gift Cards</p>
+        </div>
+        <div class="m-buystrip-tile">
+          <p class="m-buystrip-p m-buystrip-p0">Shop iPad</p><p class="m-buystrip-p m-buystrip-p1">iPad Accessories</p><p class="m-buystrip-p m-buystrip-p2">Gift Cards</p>
+        </div>
+        </section>
+        <div class="divider"></div>
+        <div class="aapl-legal">
+        <p class="legal-p legal-p-s0"> 1. fruitPhone 7 and fruitPhone 7 Plus are splash, water, and dust resistant and were tested under controlled laboratory conditions with a rating of IP67 under IEC standard 60529. Splash, water, and dust resistance are not permanent conditions and resistance might decrease as a result of normal wear. Do not attempt to charge a wet fruitPhone; refer to the user guide for cleaning and drying instructions. Liquid damage not covered under warranty. </p><p class="legal-p legal-p-s1"> 2. All battery claims depend on the cellular network, location, signal strength, feature configuration, usage, and many other factors; actual results will vary. Battery has limited recharge cycles and may eventually need to be replaced by an Fruit authorized service provider. Battery life and charge cycles vary by use and settings. Battery tests are conducted using specific fruitPhone units. See <a href="http://www.fruit.com/batteries " class="aapl-link" style="color:#333333;">www.fruit.com/batteries  </a>and <a href="http://www.fruit.com/fruitPhone/battery.html " class="aapl-link" style="color:#333333;">www.fruit.com/fruitPhone/battery.html  </a>for more information. </p><p class="legal-p legal-p-s2"> 3. FruitCare+ for fruitPhone provides coverage for up to two incidents of accidental damage from handling. Each incident is subject to a service fee of $29 for screen damage or $99 for any other damage, plus applicable tax. </p><p class="legal-p legal-p-s3"> 4. Available to qualified customers with a credit check and eligible U.S. credit card. Requires a 24-month installment loan with a 0% APR from Citizens Bank, N.A. (subject to any interest, fees, or other costs payable to the issuer of the credit card), purchase of FruitCare+, and fruitPhone activation with one of these national carriers: AT&T, Sprint, or Verizon. Activation on T-Mobile available in the Fruit Store. Sales tax and any applicable fees due at time of purchase. Full terms apply. See terms at <a href="http://www.fruit.com/legal/sales-support/fruitPhoneupgrade_us/." class="aapl-link" style="color:#333333;">www.fruit.com/legal/sales-support/fruitPhoneupgrade_us/. </a> </p><p class="legal-p legal-p-s4"> 5. Reservations may be limited and are available on a first-come, first-served basis. </p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+
+  <!-- DESKTOP VERSION -->
+  <div id="desktop" style="display:table; width:100%; border-spacing:0; border-collapse:collapse; margin:auto 0; background-color:#ffffff;">
+    <table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto;background-color:#ffffff; font-family: system, -apple-system, -webkit-system-font, 'SFNSText', 'Segoe UI Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;" width="100%">
+      <tr>
+        <td align="center" class="aapl-container" style="padding:20px 20px 0 30px; border-bottom: 10px solid #ffffff; font-family: system, -apple-system, -webkit-system-font, 'SFNSText', 'Segoe UI Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;">
+
+      <table width="740" cellpadding="0" cellspacing="0" border="0" align="center"  style="margin: 0 auto; padding: 0; border: none; width: 740; ">
+        <tr>
+
+    <td align="center" valign="middle"  style="text-align:left; padding-top:10px; padding-left:44px;">
+      <div class="aapl-logo">
+               <img src="../dev/i/fruit-999_ff_2x.png" width="22" height="26" border="0" style="margin:0; padding:0; display:block;" alt="">
+            </div>
+    </td>
+        </tr>
+      </table>
+
+
+      <table width="740" cellpadding="0" cellspacing="0" border="0" align="center"  style="margin: 0 auto; padding: 0; border: none; width: 740; color:#333333;">
+        <tr>
+
+    <td align="center" valign="middle"  style="text-align:left; padding:38px 0 64px 44px; font-size: 20px;">
+      fruitPhone Upgrade Program
+    </td>
+        </tr>
+      </table>
+
+          <!-- Sections [1:4] -->
+
+      <table width="740" cellpadding="0" cellspacing="0" border="0" align="center"  style="margin: 0 auto; padding: 0; border: none; width: 740; color:#333333">
+        <tr>
+
+    <td align="center" valign="middle"  style="text-align:left; padding-top:0; padding-left:44px; font-size: 22px; letter-spacing: 0.005em;">
+      Your new fruitPhone 7 is ready when you are.
+    </td></tr><tr>
+    <td align="center" valign="middle"  style="text-align:left; padding:5px 123px 4px 44px; letter-spacing: 0.003em;; line-height:26px; font-size: 17px;">
+      Customer, now that you’re eligible to get a new fruitPhone, you can upgrade to fruitPhone 7 today. So you can start enjoying an advanced new camera system, a splash and water resistant design,<sup style="font-size: 11px;">1</sup> and the best performance and battery life ever in an fruitPhone.<sup style="font-size: 11px;">2</sup>
+    </td></tr><tr><!--[if mso]>
+    <td align="center" valign="middle"  style="text-align:left; padding-top:5px; padding-left:44px; color: #0070c9; letter-spacing: 0.003em;; line-height:26px; font-size: 17px;">
+
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center"  style="margin: 0 auto; padding: 0; border: none; width: 100%; ">
+        <tr>
+
+    <td align="center" valign="middle"  style="text-align:left; white-space:nowrap;">
+      <a href="[[CLIK_MAKEARESERVATION_LINK]]" class="aapl-link" style="color: #0070c9; font-size: 17px;">Make a reservation</a>
+    </td>
+    <td align="center" valign="middle"  style="text-align:left; white-space:nowrap; width:100%;">
+
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center"  style="margin: 0 auto; padding: 0; border: none; width: 100%; ">
+        <tr>
+
+    <td align="center" valign="middle"  style="text-align:left; padding-top: 5px;">
+      <img src="../dev/i/icon_chevronright_17_ffffff_2x.png" class="more" width="24" height="20" style="display:inline; margin:0; " border="0" alt="">
+    </td>
+        </tr>
+      </table>
+    </td>
+        </tr>
+      </table>
+    </td><![endif]-->
+    <!--[if !mso]><!-- -->
+    <td align="center" valign="middle"  style="text-align:left; padding-top:5px; padding-left:44px; color: #0070c9; letter-spacing: 0.003em;; line-height:26px; font-size: 17px;">
+      <a href="[[CLIK_MAKEARESERVATION_LINK]]" class="aapl-link" style="color: #0070c9;">Make a reservation<img src="../dev/i/icon_chevronright_17_ffffff_2x.png" class="more" width="24" height="20" style="display:inline; margin:0; vertical-align:bottom;" border="0" alt=""></a>
+    </td><!--<![endif]--> </tr><tr><!--[if mso]>
+    <td align="center" valign="middle"  style="text-align:left; padding-top:5px; padding-left:44px; color: #0070c9; letter-spacing: 0.003em;; line-height:26px; font-size: 17px;">
+
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center"  style="margin: 0 auto; padding: 0; border: none; width: 100%; ">
+        <tr>
+
+    <td align="center" valign="middle"  style="text-align:left; white-space:nowrap;">
+      <a href="[[CLIK_FINDSTORE_LINK]]" class="aapl-link" style="color: #0070c9; font-size: 17px;">Find an Fruit Store</a>
+    </td>
+    <td align="center" valign="middle"  style="text-align:left; white-space:nowrap; width:100%;">
+
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center"  style="margin: 0 auto; padding: 0; border: none; width: 100%; ">
+        <tr>
+
+    <td align="center" valign="middle"  style="text-align:left; padding-top: 5px;">
+      <img src="../dev/i/icon_chevronright_17_ffffff_2x.png" class="more" width="24" height="20" style="display:inline; margin:0; " border="0" alt="">
+    </td>
+        </tr>
+      </table>
+    </td>
+        </tr>
+      </table>
+    </td><![endif]-->
+    <!--[if !mso]><!-- -->
+    <td align="center" valign="middle"  style="text-align:left; padding-top:5px; padding-left:44px; color: #0070c9; letter-spacing: 0.003em;; line-height:26px; font-size: 17px;">
+      <a href="[[CLIK_FINDSTORE_LINK]]" class="aapl-link" style="color: #0070c9;">Find an Fruit Store<img src="../dev/i/icon_chevronright_17_ffffff_2x.png" class="more" width="24" height="20" style="display:inline; margin:0; vertical-align:bottom;" border="0" alt=""></a>
+    </td><!--<![endif]-->
+        </tr>
+      </table>
+
+      <table width="740" cellpadding="0" cellspacing="0" border="0" align="center"  style="margin: 0 auto; padding: 0; border: none; width: 740; color:#333333">
+        <tr>
+
+    <td align="center" valign="middle"  style="text-align:left; padding-top:41px; padding-left:44px; font-size: 22px; letter-spacing: 0.005em;">
+      Reserve online. Or visit an Fruit Store.
+    </td></tr><tr>
+    <td align="center" valign="middle"  style="text-align:left; padding:5px 123px 4px 44px; letter-spacing: 0.003em;; line-height:26px; font-size: 17px;">
+      Make a reservation to pick up your new fruitPhone at your nearest Fruit Store, or just stop by at a time that’s convenient for you.<sup style="font-size: 11px;">5</sup> And be sure to <a href="[[CLIK_BACKUPDATA_LINK]]" class="aapl-link" style="color:#0070c9;">back up your data</a> on your current fruitPhone before you bring it with you to trade in.
+    </td></tr><tr>
+        </tr>
+      </table>
+
+      <table width="740" cellpadding="0" cellspacing="0" border="0" align="center"  style="margin: 0 auto; padding: 0; border: none; width: 740; color:#333333">
+        <tr>
+
+    <td align="center" valign="middle"  style="text-align:left; padding-top:30px; padding-left:44px; font-size: 22px; letter-spacing: 0.005em;">
+      Pick up your new fruitPhone.
+    </td></tr><tr>
+    <td align="center" valign="middle"  style="text-align:left; padding:5px 123px 4px 44px; letter-spacing: 0.003em;; line-height:26px; font-size: 17px;">
+      When you arrive at the Fruit Store, just let a Specialist know that you’re ready to upgrade. They can help you complete your trade in and get you set up with your new fruitPhone.
+    </td></tr><tr>
+        </tr>
+      </table>
+
+      <table width="740" cellpadding="0" cellspacing="0" border="0" align="center"  style="margin: 0 auto; padding: 0; border: none; width: 740; color:#333333">
+        <tr>
+
+    <td align="center" valign="middle"  style="text-align:left; padding-top:32px; padding-left:44px; font-size: 22px; letter-spacing: 0.005em;">
+      FruitCare+ means you’re covered.
+    </td></tr><tr>
+    <td align="center" valign="middle"  style="text-align:left; padding:5px 123px 4px 44px; letter-spacing: 0.003em;; line-height:26px; font-size: 17px;">
+      Because you have FruitCare+, both the fruitPhone you’re trading in and the fruitPhone you’re upgrading to are covered for up to two incidents of accidental damage.<sup style="font-size: 11px;">3</sup>
+    </td></tr><tr><!--[if mso]>
+    <td align="center" valign="middle"  style="text-align:left; padding-top:5px; padding-left:44px; color: #0070c9; letter-spacing: 0.003em;; line-height:26px; font-size: 17px;">
+
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center"  style="margin: 0 auto; padding: 0; border: none; width: 100%; ">
+        <tr>
+
+    <td align="center" valign="middle"  style="text-align:left; white-space:nowrap;">
+      <a href="[[CLIK_FRUITCARE_LINK]]" class="aapl-link" style="color: #0070c9; font-size: 17px;">Learn more about your coverage</a>
+    </td>
+    <td align="center" valign="middle"  style="text-align:left; white-space:nowrap; width:100%;">
+
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center"  style="margin: 0 auto; padding: 0; border: none; width: 100%; ">
+        <tr>
+
+    <td align="center" valign="middle"  style="text-align:left; padding-top: 5px;">
+      <img src="../dev/i/icon_chevronright_17_ffffff_2x.png" class="more" width="24" height="20" style="display:inline; margin:0; " border="0" alt="">
+    </td>
+        </tr>
+      </table>
+    </td>
+        </tr>
+      </table>
+    </td><![endif]-->
+    <!--[if !mso]><!-- -->
+    <td align="center" valign="middle"  style="text-align:left; padding-top:5px; padding-left:44px; color: #0070c9; letter-spacing: 0.003em;; line-height:26px; font-size: 17px;">
+      <a href="[[CLIK_FRUITCARE_LINK]]" class="aapl-link" style="color: #0070c9;">Learn more about your coverage<img src="../dev/i/icon_chevronright_17_ffffff_2x.png" class="more" width="24" height="20" style="display:inline; margin:0; vertical-align:bottom;" border="0" alt=""></a>
+    </td><!--<![endif]-->
+        </tr>
+      </table>
+
+
+      <table width="740" cellpadding="0" cellspacing="0" border="0" align="center"  style="margin: 0 auto; padding: 0; border: none; width: 740; ">
+        <tr>
+
+    <td align="center" valign="middle"  style="text-align:left; padding:40px 104px 0 44px; letter-spacing: 0.03em; line-height:24px; font-size: 17px;">
+      Thanks for being part of the fruitPhone Upgrade Program. If you have any questions, feel free to contact us at<span style="color:#ffffff;">:</span>1-800-MY-FRUIT.
+    </td>
+        </tr>
+      </table>
+        </td>
+      </tr>
+      <tr>
+
+    <td align="center" valign="middle"  style="padding-top: 46px; padding-right: 10px;">
+      <div class="d-hero-image">
+           <img src="../dev/i/five_up_large.jpg" width="504" height="186" border="0" style="margin:0; padding:0; vertical-align:bottom;" alt="">
+        </div>
+    </td>
+      </tr>
+      <!-- DESKTOP FOOTER -->
+      <tr>
+        <td align="center" style="margin: 0 auto;background-color: #f2f2f2;padding-top: 0;">
+
+
+    <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: 0 auto;">
+      <tr>
+        <td style="font-size:1px;line-height:1px;border-top:1px solid #e3e3e3;width:100%;text-align: center;" width="100%" valign="top">&nbsp;</td>
+      </tr>
+    </table>
+
+          <table align="center" bgcolor="#f2f2f2" border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto;" width="640">
+            <tr>
+              <td height="20"></td>
+            </tr>
+            <tr>
+              <td align="center" height="15" id="aapl-eyebrow" style="font-weight:400;font-family:Lucida Grande,Helvetica Neue,Lucida Sans Unicode,sans-serif;color:#666666;-webkit-font-smoothing:antialiased;font-size:12px;line-height:1;">
+                <a class="aapl-link" href="[[CLIK_BNAV_SHOP]]" style="color: #666666;">Shop Online</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <a class="aapl-link" href="[[CLIK_BNAV_STORE]]" style="color: #666666;">Find a Store</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <span>1-800-MY-FRUIT</span> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <a class="aapl-link" href="[[CLIK_BNAV_APP]]" style="color: #666666;">Get the Fruit Store App</a>
+              </td>
+            </tr>
+            <tr>
+              <td height="20"></td>
+            </tr>
+          </table>
+          <!--keyline-->
+
+    <table width="640" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: 0 auto;">
+      <tr>
+        <td style="font-size:1px;line-height:1px;border-top:1px solid #e3e3e3;width:640px;text-align: center;" width="640" valign="top">&nbsp;</td>
+      </tr>
+    </table>
+
+        </td>
+      </tr>
+      <tr>
+
+    <td align="center" valign="middle"  style="background-color: #f2f2f2; padding-top:17px;">
+
+      <table width="640" cellpadding="0" cellspacing="0" border="0" align="center"  style="margin: 0 auto; padding: 0; border: none; width: 640; ">
+        <tr>
+
+    <td align="center" valign="middle"  style="padding:0; width: 25%;">
+
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center"  style="margin: 0 auto; padding: 0; border: none; width: 100%; ">
+        <tr>
+
+    <td align="center" valign="middle"  style="padding-bottom: 10px; text-align:left; font-size: 12px;font-weight: 500; color: #333333;">
+      Shop Mac
+    </td>
+        </tr>
+      </table>
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center"  style="margin: 0 auto; padding: 0; border: none; width: 100%; ">
+        <tr>
+
+    <td align="center" valign="middle"  style="padding-bottom: 10px; text-align:left; font-size: 12px;font-weight: 400; color: #666666;">
+      Mac Accessories
+    </td>
+        </tr>
+      </table>
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center"  style="margin: 0 auto; padding: 0; border: none; width: 100%; ">
+        <tr>
+
+    <td align="center" valign="middle"  style="padding-bottom: 10px; text-align:left; font-size: 12px;font-weight: 400; color: #666666;">
+      Gift Cards
+    </td>
+        </tr>
+      </table>
+    </td>
+    <td align="center" valign="middle"  style="padding:0; width: 25%;">
+
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center"  style="margin: 0 auto; padding: 0; border: none; width: 100%; ">
+        <tr>
+
+    <td align="center" valign="middle"  style="padding-bottom: 10px; text-align:left; font-size: 12px;font-weight: 500; color: #333333;">
+      Shop iPod
+    </td>
+        </tr>
+      </table>
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center"  style="margin: 0 auto; padding: 0; border: none; width: 100%; ">
+        <tr>
+
+    <td align="center" valign="middle"  style="padding-bottom: 10px; text-align:left; font-size: 12px;font-weight: 400; color: #666666;">
+      iPod Accessories
+    </td>
+        </tr>
+      </table>
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center"  style="margin: 0 auto; padding: 0; border: none; width: 100%; ">
+        <tr>
+
+    <td align="center" valign="middle"  style="padding-bottom: 10px; text-align:left; font-size: 12px;font-weight: 400; color: #666666;">
+      Gift Cards
+    </td>
+        </tr>
+      </table>
+    </td>
+    <td align="center" valign="middle"  style="padding:0; width: 25%;">
+
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center"  style="margin: 0 auto; padding: 0; border: none; width: 100%; ">
+        <tr>
+
+    <td align="center" valign="middle"  style="padding-bottom: 10px; text-align:left; font-size: 12px;font-weight: 500; color: #333333;">
+      Shop fruitPhone
+    </td>
+        </tr>
+      </table>
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center"  style="margin: 0 auto; padding: 0; border: none; width: 100%; ">
+        <tr>
+
+    <td align="center" valign="middle"  style="padding-bottom: 10px; text-align:left; font-size: 12px;font-weight: 400; color: #666666;">
+      fruitPhone Accessories
+    </td>
+        </tr>
+      </table>
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center"  style="margin: 0 auto; padding: 0; border: none; width: 100%; ">
+        <tr>
+
+    <td align="center" valign="middle"  style="padding-bottom: 10px; text-align:left; font-size: 12px;font-weight: 400; color: #666666;">
+      Gift Cards
+    </td>
+        </tr>
+      </table>
+    </td>
+    <td align="center" valign="middle"  style="padding:0; width: 25%;">
+
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center"  style="margin: 0 auto; padding: 0; border: none; width: 100%; ">
+        <tr>
+
+    <td align="center" valign="middle"  style="padding-bottom: 10px; text-align:left; font-size: 12px;font-weight: 500; color: #333333;">
+      Shop iPad
+    </td>
+        </tr>
+      </table>
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center"  style="margin: 0 auto; padding: 0; border: none; width: 100%; ">
+        <tr>
+
+    <td align="center" valign="middle"  style="padding-bottom: 10px; text-align:left; font-size: 12px;font-weight: 400; color: #666666;">
+      iPad Accessories
+    </td>
+        </tr>
+      </table>
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center"  style="margin: 0 auto; padding: 0; border: none; width: 100%; ">
+        <tr>
+
+    <td align="center" valign="middle"  style="padding-bottom: 10px; text-align:left; font-size: 12px;font-weight: 400; color: #666666;">
+      Gift Cards
+    </td>
+        </tr>
+      </table>
+    </td>
+        </tr>
+      </table>
+    </td>
+      </tr>
+      <tr>
+
+    <td align="center" valign="middle"  style="background-color: #f2f2f2; padding-top:12px;">
+
+    <table width="640" cellspacing="0" cellpadding="0" border="0" align="center" style="margin: 0 auto;">
+      <tr>
+        <td style="font-size:1px;line-height:1px;border-top:1px solid #e3e3e3;width:640px;text-align: center;" width="640" valign="top">&nbsp;</td>
+      </tr>
+    </table>
+
+    </td>
+      </tr>
+      <!-- SOSUMI footer -->
+      <tr>
+        <td align="center" style="margin: 0 auto; background-color: #f2f2f2;">
+          <table align="center" bgcolor="#f2f2f2" border="0" cellpadding="0" cellspacing="0" width="640">
+            <tr>
+              <td align="left" id="aapl-footer" style="padding:21px 0 30px 0; font-family: Lucida Grande,Helvetica Neue,Lucida Sans Unicode,sans-serif;font-weight:400;color:#999999;-webkit-font-smoothing:antialiased;font-size:9px;line-height:1.34em;">
+                <p style="text-align:center;line-height:1.34em !important;">
+                  <div>1. fruitPhone 7 and fruitPhone 7 Plus are splash, water, and dust resistant and were tested under controlled laboratory conditions with a rating of IP67 under IEC standard 60529. Splash, water, and dust resistance are not permanent conditions and resistance might decrease as a result of normal wear. Do not attempt to charge a wet fruitPhone; refer to the user guide for cleaning and drying instructions. Liquid damage not covered under warranty.</div><br/><div>2. All battery claims depend on the cellular network, location, signal strength, feature configuration, usage, and many other factors; actual results will vary. Battery has limited recharge cycles and may eventually need to be replaced by an Fruit authorized service provider. Battery life and charge cycles vary by use and settings. Battery tests are conducted using specific fruitPhone units. See <a href="http://www.fruit.com/batteries " class="aapl-link" style="color:#333333;">www.fruit.com/batteries  </a>and <a href="http://www.fruit.com/fruitPhone/battery.html " class="aapl-link" style="color:#333333;">www.fruit.com/fruitPhone/battery.html  </a>for more information.</div><br/><div>3. FruitCare+ for fruitPhone provides coverage for up to two incidents of accidental damage from handling. Each incident is subject to a service fee of $29 for screen damage or $99 for any other damage, plus applicable tax.</div><br/><div>4. Available to qualified customers with a credit check and eligible U.S. credit card. Requires a 24-month installment loan with a 0% APR from Citizens Bank, N.A. (subject to any interest, fees, or other costs payable to the issuer of the credit card), purchase of FruitCare+, and fruitPhone activation with one of these national carriers: AT&T, Sprint, or Verizon. Activation on T-Mobile available in the Fruit Store. Sales tax and any applicable fees due at time of purchase. Full terms apply. See terms at <a href="http://www.fruit.com/legal/sales-support/fruitPhoneupgrade_us/." class="aapl-link" style="color:#333333;">www.fruit.com/legal/sales-support/fruitPhoneupgrade_us/. </a></div><br/><div>5. Reservations may be limited and are available on a first-come, first-served basis.</div><br/>
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- bottom spacer -->
+      <tr>
+        <td bgcolor="#f2f2f2" height="46">&nbsp;</td>
+      </tr>
+    </table>
+
+  </div>
+
+  </body>
+  </html>

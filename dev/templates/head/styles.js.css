@@ -1,0 +1,49 @@
+module.exports = () => {
+  return `
+  body { width: 100% !important; background-color: #ffffff; padding: 0; margin: 0; }
+  a, a.aapl-link, a.aapl-link:link { text-decoration: none; }
+  sup { vertical-align: baseline; position: relative; top: -0.4em; font-size: 11px;}
+  a.aapl-link:hover { text-decoration: underline; }
+  /*a { border: 0; outline: 0; }*/
+  table[id=aapl-eyebrow] a, table[id=aapl-footer], *[class=aapl-container] a, #aapl-footer a, a { color: inherit; }
+  #mobile-top section, #mobile-bottom section { mso-hide: all; }
+  *[class=show_me_always] { visibility: visible; }
+  /*
+  	Media queries will be ignored by most non-mobile clients.
+  	Query parameters will further ensure correct targeting.
+  */
+
+  /* Tablet (not large size, ie. iPad Pro) */
+  @media only screen and ( max-device-width: 768px ) {
+  	* { text-rendering: optimizelegibility; }
+  	body { -webkit-text-size-adjust: 110%; }
+  	/*td { line-height: 1.3em !important; }*/
+  	*[class=aapl-container] { -webkit-text-size-adjust: 106%; line-height: 1.2em !important; padding-left: 28px !important; padding-right: 28px !important; }
+  	#aapl-footer { -webkit-text-size-adjust: 120%; line-height: 1.2em !important; }
+    ${ template.tablet() }
+  }
+  /* Retina Images */
+  @media only screen and ( min-device-width: 569px ) and ( -webkit-min-device-pixel-ratio: 2 ), only screen and ( min-device-width: 569px ) and ( min-device-pixel-ratio: 2 ) {
+  	img { visibility: hidden; }
+  	*[class=more] { visibility: visible; }
+  	*[class=more], *[class~=aapl-link] img { visibility: visible !important; }
+    ${ template.retina() }
+  }
+  /* Mobile Styles */
+  @media only screen and (max-device-width: 568px) {
+  	*[id=desktop] { display: none !important; }
+  	*[id=mobile-top] { width: 100% !important; max-width: 100% !important; max-height: none !important; float: none !important; overflow: visible !important; height: inherit !important; display: block !important; margin: 0 auto !important; }
+  	*[id=mobile-bottom] { width: 100% !important; max-width: 100% !important; max-height: none !important; float: none !important; overflow: visible !important; height: inherit !important; display: block !important; margin: 0 auto !important; }
+  	/* RESET */
+  	html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, fieldset, input, abbr, article, aside, command, details, figcaption, figure, footer, header, hgroup, mark, meter, nav, output, progress, section, summary, time { margin: 0; padding: 0 }
+  	h1, h2, h3, h4, h5, h6, pre, code, address, caption, cite, code, em, strong, th, figcaption { font-size: 1em; font-weight: normal; font-style: normal }
+  	fieldset, iframe { border: none }
+  	caption, th { text-align: left }
+  	table { border-collapse: collapse; border-spacing: 0 }
+  	article, aside, footer, header, hgroup, nav, section, figure, figcaption { display: block }
+  	body { background-color: #f2f2f2; min-width: 320px !important }
+  	/* INSERT MOBILE LAYOUT HERE */
+    ${ template.mobile() }
+  }
+`
+}

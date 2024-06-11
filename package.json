@@ -1,0 +1,21 @@
+{
+  "name": "mini_mail_machine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "chokidar": "^1.6.1",
+    "fs": "0.0.1-security",
+    "glob": "^7.1.1",
+    "image-size": "^0.5.1",
+    "live-server": "^1.2.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js dev"
+  },
+  "author": "Jake",
+  "license": "MIT"
+}

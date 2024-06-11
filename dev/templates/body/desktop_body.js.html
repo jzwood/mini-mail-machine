@@ -1,0 +1,94 @@
+let bgcolor = "#f2f2f2", fontStack = `font-family: system, -apple-system, -webkit-system-font, 'SFNSText', 'Segoe UI Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;`, fontColor = "#333333",footFontColor = "#666666", linkColor = "#0070c9"
+module.exports = () => {
+  return `
+  <!-- DESKTOP VERSION -->
+  <div id="desktop" style="display:table; width:100%; border-spacing:0; border-collapse:collapse; margin:auto 0; background-color:#ffffff;">
+    <table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto;background-color:#ffffff; ${fontStack}" width="100%">
+      <tr>
+        <td align="center" class="aapl-container" style="padding:20px 20px 0 30px; border-bottom: 10px solid #ffffff; ${fontStack}">
+          ${template.elem.table('740',
+            template.elem.td("text-align:left; padding-top:10px; padding-left:44px;",
+            `<div class="aapl-logo">
+              ${template.elem.img('fruit-999_ff_2x.png', alt='', 'display:block;', scale=0.5)}
+            </div>`)
+          )}
+
+          ${template.elem.table('740',
+            template.elem.td("text-align:left; padding:38px 0 64px 44px; font-size: 20px;", data.ttl),style=`color:${fontColor};`
+          )}
+
+          <!-- Sections [1:4] -->
+          ${template.section.d(data.s1)}
+          ${template.section.d(data.s2,ptop='41px')}
+          ${template.section.d(data.s3,ptop='30px')}
+          ${template.section.d(data.s4,ptop='32px')}
+
+          ${template.elem.table('740',
+            template.elem.td("text-align:left; padding:40px 104px 0 44px; letter-spacing: 0.03em; line-height:24px; font-size: 17px;", data.s5.hero.replace(/( 1-800-MY-FRUIT)/,function(substr){return `<span style="color:#ffffff;">:</span>${substr.trim()}`}))
+          )}
+        </td>
+      </tr>
+      <tr>
+        ${template.elem.td('padding-top: 46px; padding-right: 10px;',
+        `<div class="d-hero-image">
+          ${template.elem.img('five_up_large.jpg','','vertical-align:bottom;')}
+        </div>`)}
+      </tr>
+      <!-- DESKTOP FOOTER -->
+      <tr>
+        <td align="center" style="margin: 0 auto;background-color: ${bgcolor};padding-top: 0;">
+
+          ${template.elem.keyline('100%')}
+          <table align="center" bgcolor="${bgcolor}" border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto;" width="640">
+            <tr>
+              <td height="20"></td>
+            </tr>
+            <tr>
+              <td align="center" height="15" id="aapl-eyebrow" style="font-weight:400;font-family:Lucida Grande,Helvetica Neue,Lucida Sans Unicode,sans-serif;color:${footFontColor};-webkit-font-smoothing:antialiased;font-size:12px;line-height:1;">
+                <a class="aapl-link" href="[[CLIK_BNAV_SHOP]]" style="color: ${footFontColor};">Shop Online</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <a class="aapl-link" href="[[CLIK_BNAV_STORE]]" style="color: ${footFontColor};">Find a Store</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <span>1-800-MY-FRUIT</span> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <a class="aapl-link" href="[[CLIK_BNAV_APP]]" style="color: ${footFontColor};">Get the Fruit Store App</a>
+              </td>
+            </tr>
+            <tr>
+              <td height="20"></td>
+            </tr>
+          </table>
+          <!--keyline-->
+          ${template.elem.keyline('640px')}
+        </td>
+      </tr>
+      <tr>
+        ${template.elem.td(`background-color: ${bgcolor}; padding-top:17px;`,
+          template.elem.table('640', template.d_footer.buystrip(data.footer.buystrip))
+        )}
+      </tr>
+      <tr>
+        ${template.elem.td(`background-color: ${bgcolor}; padding-top:12px;`,
+          <!--keyline-->
+          template.elem.keyline('640px')
+        )}
+      </tr>
+      <!-- SOSUMI footer -->
+      <tr>
+        <td align="center" style="margin: 0 auto; background-color: ${bgcolor};">
+          <table align="center" bgcolor="${bgcolor}" border="0" cellpadding="0" cellspacing="0" width="640">
+            <tr>
+              <td align="left" id="aapl-footer" style="padding:21px 0 30px 0; font-family: Lucida Grande,Helvetica Neue,Lucida Sans Unicode,sans-serif;font-weight:400;color:#999999;-webkit-font-smoothing:antialiased;font-size:9px;line-height:1.34em;">
+                <p style="text-align:center;line-height:1.34em !important;">
+                  ${ data.footer.copy.map((text,index) => {
+                      return  '<div>' + template.helper.autoLink(text) + '</div><br/>'  }).join('')
+                  }
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- bottom spacer -->
+      <tr>
+        <td bgcolor="${bgcolor}" height="46">&nbsp;</td>
+      </tr>
+    </table>
+
+  </div>
+  `
+}

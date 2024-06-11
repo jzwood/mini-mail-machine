@@ -1,0 +1,7 @@
+/* INSERT 2X ASSETS HERE*/
+module.exports = () => {
+  return `
+  *[class=aapl-logo] { ${template.elem.retina_img('fruit-999_ff_2x.png', 'background-position: left center;')} }
+  *[class=d-hero-image] { ${template.elem.retina_img('five_up_large_2x.jpg')} }
+  `
+}

@@ -1,0 +1,42 @@
+module.exports = () => {
+  return `
+<!-- MOBILE VERSION -->
+<div class="mobile mobile-top" id="mobile-top" style="width:0; height:0; max-height:0; float:left; overflow:hidden; display:none;">
+  <div class="body">
+    <!-- fruit logo -->
+    <div class="m-fruit-logo">
+      ${template.elem.m_img('m_fruit_999_ff_2x.png')}
+    </div>
+    <div class="mobile-body-wrapper">
+      <h1 class="m-ttl">${data.ttl}</h1>
+      ${template.section.m(data.s1,1)}
+      ${template.section.m(data.s2,2)}
+      ${template.section.m(data.s3,3)}
+      ${template.section.m(data.s4,4)}
+      <h2 class="m-section m-h2">${template.helper.colorLink(data.s5.hero)}</h2>
+    </div>
+    <div>
+      ${template.elem.m_img('m_five_up_2x.jpg','','padding-right:8px;')}
+    </div>
+  </div>
+  <div class="divider-full"></div>
+</div>
+<!-- MOBILE FOOTER -->
+  <div id="mobile-bottom" class="mobile mobile-bottom" style="width:0;height:0;max-height:0;float:left;overflow:hidden;display:none;">
+    <div class="body" style="overflow:hidden;">
+      <section class="aapl-footer">
+        ${template.m_footer.bnav(data.footer.ctas)}
+        <section class="m-buystrip-tile-container">
+          ${template.m_footer.buystrip(data.footer.buystrip)}
+        </section>
+        <div class="divider"></div>
+        <div class="aapl-legal">
+        ${ data.footer.copy.map((text,index) => {
+            return  `<p class="legal-p legal-p-s${index}"> ${template.helper.autoLink(text)} </p>` }).join('')
+        }
+        </div>
+      </section>
+    </div>
+  </div>
+  `
+}
